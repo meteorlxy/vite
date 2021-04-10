@@ -3,6 +3,14 @@ import { h } from 'vue'
 import sponsors from './sponsors.json'
 import './sponsors.css'
 import './custom.css'
+import { debounce } from 'ts-debounce'
+
+window.addEventListener(
+  'scroll',
+  debounce(() => {
+    console.log('scroll')
+  }, 300)
+)
 
 export default {
   ...Theme,
